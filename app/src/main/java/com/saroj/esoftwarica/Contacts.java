@@ -1,4 +1,4 @@
-package com.saroj.esoftwarica.userInterface;
+package com.saroj.esoftwarica;
 
 public class Contacts {
     public Contacts(String name, String address, String gender, int age) {
