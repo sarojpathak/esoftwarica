@@ -74,6 +74,7 @@ public class DashboardFragment extends Fragment implements RadioGroup.OnCheckedC
 
             if(validate()){
                 MainActivity.contact.add(new Contacts(fullname,address,gender,Integer.parseInt(age)));
+                setNull();
                 Toast.makeText(getContext(),"Student added",Toast.LENGTH_SHORT).show();
             }
         }
@@ -81,6 +82,7 @@ public class DashboardFragment extends Fragment implements RadioGroup.OnCheckedC
 
 
     }
+
     private  boolean validate(){
         if(TextUtils.isEmpty(etName.getText())){
             etName.setError("please enter full name");
@@ -119,5 +121,11 @@ public class DashboardFragment extends Fragment implements RadioGroup.OnCheckedC
             gender="other";
         }
 
+    }
+
+    private void setNull(){
+        etName.setText("");
+        etAddress.setText("");
+        etAge.setText("");
     }
 }
