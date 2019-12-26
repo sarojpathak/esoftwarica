@@ -48,7 +48,9 @@ public class HomeFragment extends Fragment {
         List<Contacts> contactsList=new ArrayList<>();
 
         if(MainActivity.contact.isEmpty()){
-            MainActivity.contact.add(new Contacts("Salman Khan","Mumbai","male",50));
+            MainActivity.contact.add(new Contacts("Saroj Pathak","Kathmandu","male",22));
+            MainActivity.contact.add(new Contacts("Samir Pathak","Dhading","male",24));
+            MainActivity.contact.add(new Contacts("Sajana Pathak","Nepal","female",17));
             ContactActivity contactActivity=new ContactActivity(getContext(),MainActivity.contact);
             recyclerView.setAdapter(contactActivity);
             recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));

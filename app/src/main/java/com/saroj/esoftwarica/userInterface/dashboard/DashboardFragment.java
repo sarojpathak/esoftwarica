@@ -89,11 +89,6 @@ public class DashboardFragment extends Fragment implements RadioGroup.OnCheckedC
             etName.requestFocus();
             return false;
         }
-        else if(TextUtils.isEmpty(etAddress.getText())){
-            etAddress.setError("please enter address");
-            etAddress.requestFocus();
-            return false;
-        }
         else if(TextUtils.isEmpty(etAge.getText())){
             etAge.setError("please enter age");
             etAge.requestFocus();
@@ -103,6 +98,11 @@ public class DashboardFragment extends Fragment implements RadioGroup.OnCheckedC
         else if(TextUtils.isEmpty(gender)){
             Toast.makeText(getContext(),"please select gender",Toast.LENGTH_SHORT).show();
             return  false;
+        }
+        else if(TextUtils.isEmpty(etAddress.getText())){
+            etAddress.setError("please enter address");
+            etAddress.requestFocus();
+            return false;
         }
         return true;
     }
